@@ -10,7 +10,7 @@ function Home(){
     }
 
     useEffect(()=>{
-        // axios.get("http://localhost:8080/me")
+        axios.get("http://localhost:8083/user/me")
     },[])
     return(<>
         <h1>Home</h1>
