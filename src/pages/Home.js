@@ -114,7 +114,9 @@ const Search = styled('div')(({ theme }) => ({
               aria-label="open drawer"
               sx={{ mr: 2 }}
             >
+
               <MenuIcon />
+            
             </IconButton>
             <Typography
               variant="h6"
@@ -138,7 +140,6 @@ const Search = styled('div')(({ theme }) => ({
       </Box>
     );
   }
-
 
 
 function Home(){
