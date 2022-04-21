@@ -55,6 +55,7 @@ function Home(){
     useEffect(()=>{
         // axios.get("http://localhost:8080/me")
     },[])
+
     return(<div>
         <h2>Welcome, User!</h2>
         <h4>What are your current saving goals?</h4>
