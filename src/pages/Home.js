@@ -13,7 +13,6 @@ import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import LaptopChromebookIcon from '@mui/icons-material/LaptopChromebook';
 
 
-
  function FloatingActionButtonExtendedSize() {
     return (
       <Box sx={{ '& > :not(style)': { m: 1 } }}>
@@ -46,33 +45,26 @@ import LaptopChromebookIcon from '@mui/icons-material/LaptopChromebook';
           Custom
         </Fab>
       </Box>
-      
     );
   }
-
-
 function Home(){
     const navigate = useNavigate();
     const logMeOut = () => {
         sessionStorage.removeItem("Auth Token");
         navigate("/login");
     }
-    
 
     useEffect(()=>{
         // axios.get("http://localhost:8080/me")
     },[])
 
     return(<div>
-   
+
         <h2>Welcome, User!</h2>
         <h4>What are your current saving goals?</h4>
         <FloatingActionButtonExtendedSize></FloatingActionButtonExtendedSize>
-  
 
-        
         <button onClick={logMeOut}>Log Out</button>
     </div>);
 }
-
 export default Home;
