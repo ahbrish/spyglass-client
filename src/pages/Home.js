@@ -11,7 +11,7 @@ import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects';
 import FlightIcon from '@mui/icons-material/Flight';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import LaptopChromebookIcon from '@mui/icons-material/LaptopChromebook';
-
+import { createTheme } from '@mui/material/styles';
 
  function FloatingActionButtonExtendedSize() {
     return (
@@ -47,6 +47,28 @@ import LaptopChromebookIcon from '@mui/icons-material/LaptopChromebook';
       </Box>
     );
   }
+
+
+  const theme = createTheme({
+    palette: {
+      primary: {
+        light: '#757ce8',
+        main: '#3f50b5',
+        dark: '#002884',
+        contrastText: '#fff',
+      },
+      secondary: {
+        light: '#ff7961',
+        main: '#f44336',
+        dark: '#ba000d',
+        contrastText: '#000',
+      },
+    },
+  });
+
+
+
+
 function Home(){
     const navigate = useNavigate();
     const logMeOut = () => {
