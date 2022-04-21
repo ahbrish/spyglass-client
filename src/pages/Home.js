@@ -6,12 +6,10 @@ import Fab from '@mui/material/Fab';
 import CottageIcon from '@mui/icons-material/Cottage';
 import DriveEtaIcon from '@mui/icons-material/DriveEta';
 import ElderlyIcon from '@mui/icons-material/Elderly';
-import BeachAccessIcon from '@mui/icons-material/BeachAccess';
 import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects';
 import FlightIcon from '@mui/icons-material/Flight';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import LaptopChromebookIcon from '@mui/icons-material/LaptopChromebook';
-import { createTheme } from '@mui/material/styles';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -63,6 +61,7 @@ const Search = styled('div')(({ theme }) => ({
       },
     },
   }));
+  
 
   function SearchAppBar() {
     return (
@@ -102,10 +101,14 @@ const Search = styled('div')(({ theme }) => ({
   }
 
  function FloatingActionButtonExtendedSize() {
-     
+    const navigate = useNavigate();
+    const goToHouseGoals = () =>{
+        navigate("/housegoals");
+    }
+    
     return (
       <Box sx={{ '& > :not(style)': { m: 1 } }}>
-        <Fab variant="extended" color="primary" aria-label="add">
+        <Fab variant="extended" color="primary" aria-label="add" onClick={goToHouseGoals} >
           <CottageIcon sx={{ mr: 1 }} />
           House
         </Fab>
@@ -159,7 +162,6 @@ function Home(){
         <h2>Welcome, User!</h2>
         <h4>What are your current saving goals?</h4>
         <FloatingActionButtonExtendedSize></FloatingActionButtonExtendedSize>
-
         <button onClick={logMeOut}>Log Out</button>
     </div>);
 }
