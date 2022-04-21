@@ -57,10 +57,10 @@ function Home(){
     },[])
 
     return(<div>
+        <button onClick={logMeOut}>Log Out</button>
         <h2>Welcome, User!</h2>
         <h4>What are your current saving goals?</h4>
         <FloatingActionButtonExtendedSize></FloatingActionButtonExtendedSize>
-        <button onClick={logMeOut}>Log Out</button>
     </div>);
 }
 export default Home;
