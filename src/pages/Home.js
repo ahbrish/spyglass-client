@@ -25,6 +25,16 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
 
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import ClickAwayListener from '@mui/material/ClickAwayListener';
+import Grow from '@mui/material/Grow';
+import Paper from '@mui/material/Paper';
+import Popper from '@mui/material/Popper';
+import MenuItem from '@mui/material/MenuItem';
+import MenuList from '@mui/material/MenuList';
+import Stack from '@mui/material/Stack';
+
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -111,6 +121,7 @@ const Search = styled('div')(({ theme }) => ({
 
  function FloatingActionButtonExtendedSize() {
     const navigate = useNavigate();
+
     const goToHouseGoals = () =>{
         navigate("/housegoals");
     }
@@ -149,7 +160,8 @@ const Search = styled('div')(({ theme }) => ({
       </Box>
     );
   }
-
+  
+  
 
   
 
@@ -195,8 +207,7 @@ function PositionedMenu() {
         </Menu>
       </div>
     );
-  }
-
+    }
 
 
 
@@ -210,9 +221,11 @@ function Home(){
         navigate("/login");
     }
 
+
     useEffect(()=>{
         // axios.get("http://localhost:8080/me")
     },[])
+
 
     return(<div>
         <SearchAppBar></SearchAppBar>
