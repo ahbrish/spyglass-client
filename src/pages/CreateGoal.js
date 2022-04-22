@@ -21,6 +21,8 @@ import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import CircularProgress from './CircularProgress';
+import TextField from '@mui/material/TextField';
+import FormHelperText from '@mui/material/FormHelperText';
 
 import FormControl from '@mui/material/FormControl';
 import InputAdornment from '@mui/material/InputAdornment';
@@ -32,7 +34,7 @@ function Copyright() {
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        www.vanguard.com
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -40,7 +42,7 @@ function Copyright() {
   );
 }
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const cards = [1];
 
 const theme = createTheme();
 
@@ -139,18 +141,50 @@ function InputAdornments() {
     };
 
     return (
-        
-        <FormControl fullWidth sx={{ m: 1, width: '25ch' }}>
-        <InputLabel htmlFor="outlined-adornment-amount">Amount Goal</InputLabel>
-        <OutlinedInput
-          id="outlined-adornment-amount"
-          value={values.amount}
-          onChange={handleChange('amount')}
-          startAdornment={<InputAdornment position="start">$</InputAdornment>}
-          label="Amount"
-        />
-      </FormControl>
-      
+        <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
+        <div>
+        <TextField
+            label="Goal Name:"
+            id="outlined-start-adornment"
+            sx={{ m: 1, width: '25ch' }}
+            InputProps={{
+              startAdornment: <InputAdornment position="start"></InputAdornment>,
+            }}
+          />
+          <TextField
+            label="Target Goal Amount:"
+            id="outlined-start-adornment"
+            sx={{ m: 1, width: '25ch' }}
+            InputProps={{
+              startAdornment: <InputAdornment position="start">$</InputAdornment>,
+            }}
+          />
+          <TextField
+            label="Amount Already Saved:"
+            id="outlined-start-adornment"
+            sx={{ m: 1, width: '25ch' }}
+            InputProps={{
+              startAdornment: <InputAdornment position="start">$</InputAdornment>,
+            }}
+          />
+          <TextField
+            label="Target Date:"
+            id="outlined-start-adornment"
+            sx={{ m: 1, width: '25ch' }}
+            InputProps={{
+              startAdornment: <InputAdornment position="start"></InputAdornment>,
+            }}
+          />
+           <TextField
+            label="Notes:"
+            id="outlined-start-adornment"
+            sx={{ m: 1, width: '25ch' }}
+            InputProps={{
+              startAdornment: <InputAdornment position="start"></InputAdornment>,
+            }}
+          />
+        </div>
+        </Box>
     );
     }
 
@@ -196,7 +230,7 @@ export default function Album() {
               {/* Something short and leading about the collection below—its contents,
               the creator, etc. Make it short and sweet, but not too short so folks
               don&apos;t simply skip over it entirely. */}
-              User, Create your new (House) goal!
+              User, Create your new House goal!
             </Typography>
             <Stack
               sx={{ pt: 4 }}
@@ -205,8 +239,10 @@ export default function Album() {
               justifyContent="center"
             >
                 <InputAdornments></InputAdornments>
-                <InputAdornments></InputAdornments>
-              <Button variant="contained" onClick={goToHouseGoals} >Submit</Button>
+
+
+                
+              <Button variant="contained" align= "center" onClick={goToHouseGoals} >Submit</Button>
             </Stack>
           </Container>
         </Box>
@@ -215,7 +251,7 @@ export default function Album() {
       {/* Footer */}
       <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
         <Typography variant="h6" align="center" gutterBottom>
-          Footer
+          SpyGlass: Created by the Vanguard
         </Typography>
         <Typography
           variant="subtitle1"
@@ -223,7 +259,7 @@ export default function Album() {
           color="text.secondary"
           component="p"
         >
-          Something here to give the footer a purpose!
+          Serving all your financial needs!
         </Typography>
         <Copyright />
       </Box>
