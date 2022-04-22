@@ -22,6 +22,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import CircularProgress from './CircularProgress';
 
+import FormControl from '@mui/material/FormControl';
+import InputAdornment from '@mui/material/InputAdornment';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import InputLabel from '@mui/material/InputLabel';
+
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
@@ -119,6 +124,42 @@ function SearchAppBar() {
   }
 
 
+
+function InputAdornments() {
+    const [values, setValues] = React.useState({
+      amount: '',
+      password: '',
+      weight: '',
+      weightRange: '',
+      showPassword: false,
+    });
+  
+    const handleChange = (prop) => (event) => {
+      setValues({ ...values, [prop]: event.target.value });
+    };
+
+    return (
+        
+        <FormControl fullWidth sx={{ m: 1, width: '25ch' }}>
+        <InputLabel htmlFor="outlined-adornment-amount">Amount Goal</InputLabel>
+        <OutlinedInput
+          id="outlined-adornment-amount"
+          value={values.amount}
+          onChange={handleChange('amount')}
+          startAdornment={<InputAdornment position="start">$</InputAdornment>}
+          label="Amount"
+        />
+      </FormControl>
+      
+    );
+    }
+
+
+
+
+
+
+
 export default function Album() {
   const navigate = useNavigate();
 
@@ -149,13 +190,13 @@ export default function Album() {
               color="text.primary"
               gutterBottom
             >
-              Create your new goal
+              New Goal
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
               {/* Something short and leading about the collection below—its contents,
               the creator, etc. Make it short and sweet, but not too short so folks
               don&apos;t simply skip over it entirely. */}
-              User, so far you have saved ___ towards your new House!
+              User, Create your new (House) goal!
             </Typography>
             <Stack
               sx={{ pt: 4 }}
@@ -163,6 +204,8 @@ export default function Album() {
               spacing={2}
               justifyContent="center"
             >
+                <InputAdornments></InputAdornments>
+                <InputAdornments></InputAdornments>
               <Button variant="contained" onClick={goToHouseGoals} >Submit</Button>
             </Stack>
           </Container>
