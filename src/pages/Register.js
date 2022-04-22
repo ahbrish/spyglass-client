@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 
 import TextField from '@mui/material/TextField';
@@ -36,11 +35,11 @@ function Register(){
         createUserWithEmailAndPassword(auth, userData.email, userData.password)
         .then((response) => {
             sessionStorage.setItem("Auth Token", response._tokenResponse.refreshToken); 
-            // axios.post("http://localhost:8080/me",userData)
-            // .then(response => {
-                // console.log(response);
-                // navigate("/home");
-            // })           
+            axios.post("http://localhost:8080/me",userData)
+            .then(response => {
+                console.log(response);
+                navigate("/home");
+            })           
             
         }).catch((error)=> {
             console.log(error);
@@ -91,7 +90,7 @@ function Register(){
                                 onChange={handleInputChange}
                             />
                         </Grid>
-                        <Button variant="contained" color="primary" type="submit">
+                        <Button variant="contained" color="primary" type="submit" >
           Submit
         </Button>
                     </Grid>

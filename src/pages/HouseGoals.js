@@ -117,7 +117,8 @@ function SearchAppBar() {
   }
 
 
-export default function Album() {
+export default function HouseGoals() {
+  
   return (
       
     <ThemeProvider theme={theme}>

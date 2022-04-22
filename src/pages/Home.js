@@ -20,14 +20,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 
 import * as React from 'react';
-import Button from '@mui/material/Button';
-import ClickAwayListener from '@mui/material/ClickAwayListener';
-import Grow from '@mui/material/Grow';
-import Paper from '@mui/material/Paper';
-import Popper from '@mui/material/Popper';
-import MenuItem from '@mui/material/MenuItem';
-import MenuList from '@mui/material/MenuList';
-import Stack from '@mui/material/Stack';
+
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -177,4 +170,5 @@ function Home(){
         <button onClick={logMeOut}>Log Out</button>
     </div>);
 }
+
 export default Home;
