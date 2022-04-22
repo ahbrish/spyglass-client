@@ -36,11 +36,11 @@ function Register(){
         createUserWithEmailAndPassword(auth, userData.email, userData.password)
         .then((response) => {
             sessionStorage.setItem("Auth Token", response._tokenResponse.refreshToken); 
-            // axios.post("http://localhost:8080/me",userData)
-            // .then(response => {
-                // console.log(response);
-                // navigate("/home");
-            // })           
+            axios.post("http://localhost:8080/me",userData)
+            .then(response => {
+                console.log(response);
+                navigate("/home");
+            })           
             
         }).catch((error)=> {
             console.log(error);

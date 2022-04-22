@@ -26,12 +26,10 @@ import MenuItem from '@mui/material/MenuItem';
 
 
 import * as React from 'react';
-import Button from '@mui/material/Button';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
 import Grow from '@mui/material/Grow';
 import Paper from '@mui/material/Paper';
 import Popper from '@mui/material/Popper';
-import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 import Stack from '@mui/material/Stack';
 
@@ -81,7 +79,7 @@ const Search = styled('div')(({ theme }) => ({
   function SearchAppBar() {
     return (
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
+        <AppBar position="static" >
           <Toolbar>
             <IconButton
               size="large"
@@ -128,31 +126,31 @@ const Search = styled('div')(({ theme }) => ({
     
     return (
       <Box sx={{ '& > :not(style)': { m: 1 } }}>
-        <Fab variant="extended" color="primary" aria-label="add" onClick={goToHouseGoals} >
+        <Fab variant="extended" color="error" aria-label="add" onClick={goToHouseGoals} >
           <CottageIcon sx={{ mr: 1 }} />
           House
         </Fab>
-        <Fab variant="extended" color="primary" aria-label="add">
+        <Fab variant="extended" color="error" aria-label="add">
           <DriveEtaIcon sx={{ mr: 1 }} />
           New Car
         </Fab>
-        <Fab variant="extended" color="primary" aria-label="add">
+        <Fab variant="extended" color="error" aria-label="add">
           <FlightIcon sx={{ mr: 1 }} />
           Vacation
         </Fab>
-        <Fab variant="extended" color="primary" aria-label="add">
+        <Fab variant="extended" color="error" aria-label="add">
           <LaptopChromebookIcon sx={{ mr: 1 }} />
           Education
         </Fab>
-        <Fab variant="extended" color="primary" aria-label="add">
+        <Fab variant="extended" color="error" aria-label="add">
           <LocalHospitalIcon sx={{ mr: 1 }} />
           Emergency
         </Fab>
-        <Fab variant="extended" color="primary" aria-label="add">
+        <Fab variant="extended" color="error" aria-label="add">
           <ElderlyIcon sx={{ mr: 1 }} />
           Retirement
         </Fab>
-        <Fab variant="extended" color="primary" aria-label="add">
+        <Fab variant="extended" color="error" aria-label="add">
           <EmojiObjectsIcon sx={{ mr: 1 }} />
           Custom
         </Fab>
