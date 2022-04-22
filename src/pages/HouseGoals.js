@@ -213,7 +213,6 @@ export default function Album() {
             ))}
           </Grid>
         </Container>
-        
       </main>
       {/* Footer */}
       <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
