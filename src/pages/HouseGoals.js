@@ -35,7 +35,7 @@ function Copyright() {
   );
 }
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const cards = [1, 2, 3];
 
 const theme = createTheme();
 
@@ -119,6 +119,10 @@ function SearchAppBar() {
   }
 
 
+
+
+
+
 export default function Album() {
   const navigate = useNavigate();
 
@@ -189,19 +193,25 @@ export default function Album() {
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Heading
-                      <Typography>
-                        <CircularProgress></CircularProgress>
-                      </Typography>
+                      House Goal!  
                     </Typography>
                     <Typography>
-                      This is a media card. You can use this section to describe the
-                      content.
+                      Target: $300
                     </Typography>
+                    <Typography>
+                      Amount Already Saved: 
+                    </Typography>
+                    <Typography>
+                      Savings Date Goal:
+                    </Typography>
+                    <Typography>
+                        <CircularProgress></CircularProgress>
+                      </Typography>
                   </CardContent>
                   <CardActions>
                     <Button size="small">View</Button>
                     <Button size="small">Edit</Button>
+                    <Button size="small">Delete</Button>
                   </CardActions>
                 </Card>
               </Grid>
