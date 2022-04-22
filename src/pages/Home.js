@@ -126,31 +126,31 @@ const Search = styled('div')(({ theme }) => ({
     
     return (
       <Box sx={{ '& > :not(style)': { m: 1 } }}>
-        <Fab variant="extended" color="error" aria-label="add" onClick={goToHouseGoals} >
+        <Fab variant="extended" color="primary" aria-label="add" onClick={goToHouseGoals} >
           <CottageIcon sx={{ mr: 1 }} />
           House
         </Fab>
-        <Fab variant="extended" color="error" aria-label="add">
+        <Fab variant="extended" color="primary" aria-label="add">
           <DriveEtaIcon sx={{ mr: 1 }} />
           New Car
         </Fab>
-        <Fab variant="extended" color="error" aria-label="add">
+        <Fab variant="extended" color="primary" aria-label="add">
           <FlightIcon sx={{ mr: 1 }} />
           Vacation
         </Fab>
-        <Fab variant="extended" color="error" aria-label="add">
+        <Fab variant="extended" color="primary" aria-label="add">
           <LaptopChromebookIcon sx={{ mr: 1 }} />
           Education
         </Fab>
-        <Fab variant="extended" color="error" aria-label="add">
+        <Fab variant="extended" color="primary" aria-label="add">
           <LocalHospitalIcon sx={{ mr: 1 }} />
           Emergency
         </Fab>
-        <Fab variant="extended" color="error" aria-label="add">
+        <Fab variant="extended" color="primary" aria-label="add">
           <ElderlyIcon sx={{ mr: 1 }} />
           Retirement
         </Fab>
-        <Fab variant="extended" color="error" aria-label="add">
+        <Fab variant="extended" color="primary" aria-label="add">
           <EmojiObjectsIcon sx={{ mr: 1 }} />
           Custom
         </Fab>
@@ -242,4 +242,5 @@ function Home(){
         <button onClick={logMeOut}>Log Out</button>
     </div>);
 }
+
 export default Home;

@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 
 import TextField from '@mui/material/TextField';
@@ -59,7 +58,7 @@ function Register(){
                             <TextField
                                 id="email"
                                 name="email"
-                                label="Enter the Email"
+                                label="Email Address"
                                 variant="outlined"
                                 onChange={handleInputChange}
                             />
@@ -68,7 +67,7 @@ function Register(){
                             <TextField
                                 id="password"
                                 name="password"
-                                label="Enter the Password"
+                                label="Password"
                                 variant="outlined"
                                 onChange={handleInputChange}
                             />
@@ -77,7 +76,7 @@ function Register(){
                             <TextField
                                 id="firstName"
                                 name="firstName"
-                                label="Enter the First Name"
+                                label="Enter your First Name"
                                 variant="outlined"
                                 onChange={handleInputChange}
                             />
@@ -86,12 +85,12 @@ function Register(){
                             <TextField
                                 id="lastName"
                                 name="lastName"
-                                label="Enter the Last Name"
+                                label="Enter your Last Name"
                                 variant="outlined"
                                 onChange={handleInputChange}
                             />
                         </Grid>
-                        <Button variant="contained" color="primary" type="submit">
+                        <Button variant="contained" color="primary" type="submit" >
           Submit
         </Button>
                     </Grid>
