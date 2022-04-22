@@ -239,6 +239,9 @@ export default function Album() {
               justifyContent="center"
             >
                 <InputAdornments></InputAdornments>
+
+
+                
               <Button variant="contained" align= "center" onClick={goToHouseGoals} >Submit</Button>
             </Stack>
           </Container>
