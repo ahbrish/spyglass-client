@@ -19,6 +19,16 @@ import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import ClickAwayListener from '@mui/material/ClickAwayListener';
+import Grow from '@mui/material/Grow';
+import Paper from '@mui/material/Paper';
+import Popper from '@mui/material/Popper';
+import MenuItem from '@mui/material/MenuItem';
+import MenuList from '@mui/material/MenuList';
+import Stack from '@mui/material/Stack';
+
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -64,6 +74,7 @@ const Search = styled('div')(({ theme }) => ({
 
  function FloatingActionButtonExtendedSize() {
     const navigate = useNavigate();
+
     const goToHouseGoals = () =>{
         navigate("/housegoals");
     }
@@ -101,22 +112,25 @@ const Search = styled('div')(({ theme }) => ({
       </Box>
     );
   }
+  
+  
 
     function SearchAppBar() {
+
     return (
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar>
-            <IconButton
+            <IconButton 
               size="large"
               edge="start"
               color="inherit"
               aria-label="open drawer"
               sx={{ mr: 2 }}
-            >
-
+              
+              >
+                
               <MenuIcon />
-            
             </IconButton>
             <Typography
               variant="h6"
@@ -139,7 +153,7 @@ const Search = styled('div')(({ theme }) => ({
         </AppBar>
       </Box>
     );
-  }
+    }
 
 
 function Home(){
@@ -149,9 +163,11 @@ function Home(){
         navigate("/login");
     }
 
+
     useEffect(()=>{
         // axios.get("http://localhost:8080/me")
     },[])
+
 
     return(<div>
         <SearchAppBar></SearchAppBar>
