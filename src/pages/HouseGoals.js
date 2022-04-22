@@ -27,7 +27,7 @@ function Copyright() {
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        www.vanguard.com
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -35,7 +35,7 @@ function Copyright() {
   );
 }
 
-const cards = [1, 2, 3];
+const cards = [1];
 
 const theme = createTheme();
 
@@ -121,8 +121,6 @@ function SearchAppBar() {
 
 
 
-
-
 export default function Album() {
   const navigate = useNavigate();
 
@@ -156,13 +154,12 @@ export default function Album() {
               House Goals
             </Typography>
             <Typography>
+
               <CircularProgress></CircularProgress>
+
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
-              {/* Something short and leading about the collection below—its contents,
-              the creator, etc. Make it short and sweet, but not too short so folks
-              don&apos;t simply skip over it entirely. */}
-              User, so far you have saved ___ towards your new House!
+              User, so far you have saved $3000 total towards your House savings goals!
             </Typography>
             <Stack
               sx={{ pt: 4 }}
@@ -182,28 +179,25 @@ export default function Album() {
                 <Card
                   sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
                 >
-                  <CardMedia
-                    component="img"
-                    sx={{
-                      // 16:9
-                      pt: '56.25%',
-                    }}
-                    image="https://source.unsplash.com/random"
-                    alt="random"
-                  />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      House Goal!  
+                      Beach House  
                     </Typography>
                     <Typography>
-                      Target: $300
+                      Target: $10000
                     </Typography>
                     <Typography>
-                      Amount Already Saved: 
+                      Already Saved: $3000
                     </Typography>
                     <Typography>
-                      Savings Date Goal:
+                      Target Date: August 15, 2022
                     </Typography>
+                    <Typography>
+                      
+                    </ Typography>
+                    <Typography>
+                    -------------------------
+                    </ Typography>
                     <Typography>
                         <CircularProgress></CircularProgress>
                       </Typography>
@@ -214,15 +208,17 @@ export default function Album() {
                     <Button size="small">Delete</Button>
                   </CardActions>
                 </Card>
+                
               </Grid>
             ))}
           </Grid>
         </Container>
+        
       </main>
       {/* Footer */}
       <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
-        <Typography variant="h6" align="center" gutterBottom>
-          Footer
+        <Typography variant="h7" align="center" gutterBottom>
+          SpyGlass: Created by the Vanguard Group
         </Typography>
         <Typography
           variant="subtitle1"
@@ -230,7 +226,7 @@ export default function Album() {
           color="text.secondary"
           component="p"
         >
-          Something here to give the footer a purpose!
+          Serving all of your financial needs!
         </Typography>
         <Copyright />
       </Box>
