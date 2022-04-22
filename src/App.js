@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import { AppRoutes } from './routes/AppRoutes';
 import Search from './components/Search/Search';
 
+
 function App() {
 
   
