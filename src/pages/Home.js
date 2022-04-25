@@ -18,20 +18,36 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
-import MenuBar from './MenuBar'
-
+import CssBaseline from '@mui/material/CssBaseline';
+import Stack from '@mui/material/Stack';
+import HouseIcon from '@mui/icons-material/House';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import Container from '@mui/material/Container';
+import Link from '@mui/material/Link';
 
 
-import * as React from 'react';
-import ClickAwayListener from '@mui/material/ClickAwayListener';
-import Grow from '@mui/material/Grow';
-import Paper from '@mui/material/Paper';
-import Popper from '@mui/material/Popper';
-import MenuList from '@mui/material/MenuList';
-import Stack from '@mui/material/Stack';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import TextField from '@mui/material/TextField';
+import InputAdornment from '@mui/material/InputAdornment';
+
+
+
+function Copyright() {
+  return (
+    <Typography variant="body2" color="text.secondary" align="center">
+      {'Copyright © '}
+      <Link color="inherit" href="https://mui.com/">
+        www.vanguard.com
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+}
+
+const theme = createTheme();
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -79,7 +95,7 @@ const Search = styled('div')(({ theme }) => ({
   function SearchAppBar() {
     return (
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static" >
+        <AppBar position="static" color = "error" >
           <Toolbar>
             <IconButton
               size="large"
@@ -100,7 +116,7 @@ const Search = styled('div')(({ theme }) => ({
               component="div"
               sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
             >
-            Vanguard
+            <HouseIcon></HouseIcon>  Vanguard
             </Typography>
             <Search>
               <SearchIconWrapper>
@@ -126,31 +142,31 @@ const Search = styled('div')(({ theme }) => ({
     
     return (
       <Box sx={{ '& > :not(style)': { m: 1 } }}>
-        <Fab variant="extended" color="primary" aria-label="add" onClick={goToHouseGoals} >
-          <CottageIcon sx={{ mr: 1 }} />
+        <Fab variant="extended" color="error" aria-label="add" onClick={goToHouseGoals} >
+        <CottageIcon sx={{ mr: 1 }} />
           House
         </Fab>
-        <Fab variant="extended" color="primary" aria-label="add">
+        <Fab variant="extended" color="error" aria-label="add">
           <DriveEtaIcon sx={{ mr: 1 }} />
           New Car
         </Fab>
-        <Fab variant="extended" color="primary" aria-label="add">
+        <Fab variant="extended" color="error" aria-label="add">
           <FlightIcon sx={{ mr: 1 }} />
           Vacation
         </Fab>
-        <Fab variant="extended" color="primary" aria-label="add">
+        <Fab variant="extended" color="error" aria-label="add">
           <LaptopChromebookIcon sx={{ mr: 1 }} />
           Education
         </Fab>
-        <Fab variant="extended" color="primary" aria-label="add">
+        <Fab variant="extended" color="error" aria-label="add">
           <LocalHospitalIcon sx={{ mr: 1 }} />
           Emergency
         </Fab>
-        <Fab variant="extended" color="primary" aria-label="add">
+        <Fab variant="extended" color="error" aria-label="add">
           <ElderlyIcon sx={{ mr: 1 }} />
           Retirement
         </Fab>
-        <Fab variant="extended" color="primary" aria-label="add">
+        <Fab variant="extended" color="error" aria-label="add">
           <EmojiObjectsIcon sx={{ mr: 1 }} />
           Custom
         </Fab>
@@ -168,6 +184,9 @@ function PositionedMenu() {
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
       setAnchorEl(event.currentTarget);
+    };
+    const handleOpenMenu = e => {
+      setAnchorEl(e.currentTarget);
     };
     const handleClose = () => {
       setAnchorEl(null);
@@ -188,7 +207,7 @@ function PositionedMenu() {
           id="demo-positioned-menu"
           aria-labelledby="demo-positioned-button"
           anchorEl={anchorEl}
-          open={open}
+          open={Boolean(open)}
           onClose={handleClose}
           anchorOrigin={{
             vertical: 'top',
@@ -208,17 +227,6 @@ function PositionedMenu() {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
     
 
 function Home(){
@@ -234,13 +242,70 @@ function Home(){
     },[])
 
 
-    return(<div>
-        <SearchAppBar></SearchAppBar>
-        <h2>Welcome, User!</h2>
-        <h4>What are your current saving goals?</h4>
-        <FloatingActionButtonExtendedSize></FloatingActionButtonExtendedSize>
-        <button onClick={logMeOut}>Log Out</button>
-    </div>);
+    return( <ThemeProvider theme={theme}>
+      <SearchAppBar></SearchAppBar>
+    <CssBaseline />
+    <AppBar position="relative">
+    </AppBar>
+    <main>
+      {/* Hero unit */}
+      <Box
+        sx={{
+          bgcolor: 'background.paper',
+          pt: 8,
+          pb: 6,
+        }}
+      >
+        <Container maxWidth="sm">
+          <Typography
+            component="h1"
+            variant="h2"
+            align="center"
+            color="text.primary"
+            gutterBottom
+          >
+            Welcome User!
+          </Typography>
+          <Typography variant="h5" align="center" color="text.secondary" paragraph>
+            {/* Something short and leading about the collection below—its contents,
+            the creator, etc. Make it short and sweet, but not too short so folks
+            don&apos;t simply skip over it entirely. */}
+            What are your current saving goals?
+          </Typography>
+          <Stack
+            sx={{ pt: 4 }}
+            direction="row"
+            spacing={2}
+            justifyContent="center"
+          >
+              
+<FloatingActionButtonExtendedSize></FloatingActionButtonExtendedSize>
+
+          </Stack>
+        </Container>
+      </Box>
+      <div>
+<button onClick={logMeOut}>Log Out</button>
+</div> 
+    </main>
+    {/* Footer */}
+    <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
+      <Typography variant="h6" align="center" gutterBottom>
+        SpyGlass
+      </Typography>
+      <Typography
+        variant="subtitle1"
+        align="center"
+        color="text.secondary"
+        component="p"
+      >
+        Serving all your financial needs!
+      </Typography>
+      <Copyright />
+    </Box>
+    {/* End footer */}
+  </ThemeProvider>
+);
 }
 
 export default Home;

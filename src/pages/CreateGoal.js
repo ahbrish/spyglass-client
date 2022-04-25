@@ -2,12 +2,7 @@ import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import CssBaseline from '@mui/material/CssBaseline';
-import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -20,14 +15,9 @@ import IconButton from '@mui/material/IconButton';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
-import CircularProgress from './CircularProgress';
 import TextField from '@mui/material/TextField';
-import FormHelperText from '@mui/material/FormHelperText';
-
-import FormControl from '@mui/material/FormControl';
 import InputAdornment from '@mui/material/InputAdornment';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import InputLabel from '@mui/material/InputLabel';
+import HouseIcon from '@mui/icons-material/House';
 
 function Copyright() {
   return (
@@ -91,7 +81,7 @@ const Search = styled('div')(({ theme }) => ({
 function SearchAppBar() {
     return (
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
+        <AppBar position="static" color = "error">
           <Toolbar>
             <IconButton
               size="large"
@@ -108,7 +98,8 @@ function SearchAppBar() {
               component="div"
               sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
             >
-              Vanguard
+
+              <HouseIcon></HouseIcon>  Vanguard
             </Typography>
             <Search>
               <SearchIconWrapper>
@@ -139,7 +130,11 @@ function InputAdornments() {
     const handleChange = (prop) => (event) => {
       setValues({ ...values, [prop]: event.target.value });
     };
-
+    
+    const navigate = useNavigate();
+    const goToHouseGoals = () =>{
+        navigate("/housegoals");
+    }
     return (
         <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
         <div>
@@ -183,6 +178,10 @@ function InputAdornments() {
               startAdornment: <InputAdornment position="start"></InputAdornment>,
             }}
           />
+          
+        </div>
+        <div>
+        <Button variant="contained" align= "center" color = "error" onClick={goToHouseGoals} >Submit</Button>
         </div>
         </Box>
     );
@@ -194,12 +193,12 @@ function InputAdornments() {
 
 
 
-export default function Album() {
-  const navigate = useNavigate();
-
-  const goToHouseGoals = () =>{
-    navigate("/housegoals");
-}
+export default function HowTo() {
+    const navigate = useNavigate();
+    const goToHouseGoals = () =>{
+        navigate("/housegoals");
+    }
+  
   return (
       
     <ThemeProvider theme={theme}>
@@ -242,7 +241,7 @@ export default function Album() {
 
 
                 
-              <Button variant="contained" align= "center" onClick={goToHouseGoals} >Submit</Button>
+             
             </Stack>
           </Container>
         </Box>
@@ -251,7 +250,7 @@ export default function Album() {
       {/* Footer */}
       <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
         <Typography variant="h6" align="center" gutterBottom>
-          SpyGlass: Created by the Vanguard
+          SpyGlass
         </Typography>
         <Typography
           variant="subtitle1"

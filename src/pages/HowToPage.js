@@ -147,17 +147,66 @@ export default function HowTo() {
               color="text.primary"
               gutterBottom
             >
-              About Us!
+              HowToGuide
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
               {/* Something short and leading about the collection below—its contents,
               the creator, etc. Make it short and sweet, but not too short so folks
               don&apos;t simply skip over it entirely. */}
-              We are here to support you!
+              Please check out our frequently asked questions!
             </Typography>
 
-       
-       
+            <Typography variant="body1" align="center" color="text.primary" paragraph>
+              {/* Something short and leading about the collection below—its contents,
+              the creator, etc. Make it short and sweet, but not too short so folks
+              don&apos;t simply skip over it entirely. */}
+              How to create a goal?
+            </Typography>
+            <Typography variant="body2" align="center" color="text.secondary" paragraph>
+              {/* Something short and leading about the collection below—its contents,
+              the creator, etc. Make it short and sweet, but not too short so folks
+              don&apos;t simply skip over it entirely. */}
+              To create a goal
+            </Typography>
+
+            <Typography variant="body1" align="center" color="text.primary" paragraph>
+              {/* Something short and leading about the collection below—its contents,
+              the creator, etc. Make it short and sweet, but not too short so folks
+              don&apos;t simply skip over it entirely. */}
+              How to delete a goal?
+            </Typography>
+            <Typography variant="body2" align="center" color="text.secondary" paragraph>
+              {/* Something short and leading about the collection below—its contents,
+              the creator, etc. Make it short and sweet, but not too short so folks
+              don&apos;t simply skip over it entirely. */}
+              To delete a goal
+            </Typography>
+
+            <Typography variant="body1" align="center" color="text.primary" paragraph>
+              {/* Something short and leading about the collection below—its contents,
+              the creator, etc. Make it short and sweet, but not too short so folks
+              don&apos;t simply skip over it entirely. */}
+              How to edit a goal?
+            </Typography>
+            <Typography variant="body2" align="center" color="text.secondary" paragraph>
+              {/* Something short and leading about the collection below—its contents,
+              the creator, etc. Make it short and sweet, but not too short so folks
+              don&apos;t simply skip over it entirely. */}
+              To edit a goal
+            </Typography>
+
+            <Typography variant="body1" align="center" color="text.primary" paragraph>
+              {/* Something short and leading about the collection below—its contents,
+              the creator, etc. Make it short and sweet, but not too short so folks
+              don&apos;t simply skip over it entirely. */}
+              How to contact support?
+            </Typography>
+            <Typography variant="body2" align="center" color="text.secondary" paragraph>
+              {/* Something short and leading about the collection below—its contents,
+              the creator, etc. Make it short and sweet, but not too short so folks
+              don&apos;t simply skip over it entirely. */}
+              Please contact us by phone or through email.
+            </Typography>
 
             <Stack
               sx={{ pt: 4 }}
@@ -178,7 +227,7 @@ export default function HowTo() {
       {/* Footer */}
       <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
         <Typography variant="h6" align="center" gutterBottom>
-          SpyGlass: Created by the Vanguard
+          SpyGlass
         </Typography>
         <Typography
           variant="subtitle1"

@@ -21,6 +21,7 @@ import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import CircularProgress from './CircularProgress';
+import HouseIcon from '@mui/icons-material/House';
 
 function Copyright() {
   return (
@@ -84,7 +85,7 @@ const Search = styled('div')(({ theme }) => ({
 function SearchAppBar() {
     return (
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
+        <AppBar position="static" color = "error">
           <Toolbar>
             <IconButton
               size="large"
@@ -101,7 +102,7 @@ function SearchAppBar() {
               component="div"
               sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
             >
-              Vanguard
+              <HouseIcon></HouseIcon>  Vanguard
             </Typography>
             <Search>
               <SearchIconWrapper>
@@ -167,7 +168,7 @@ export default function Album() {
               spacing={2}
               justifyContent="center"
             >
-              <Button variant="contained" onClick={goToCreateGoal} >Click here to add a new house goal</Button>
+              <Button variant="contained" color = "error" onClick={goToCreateGoal} >Click here to add a new house goal</Button>
             </Stack>
           </Container>
         </Box>
@@ -203,9 +204,9 @@ export default function Album() {
                       </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small">View</Button>
-                    <Button size="small">Edit</Button>
-                    <Button size="small">Delete</Button>
+                    <Button size="small" color = "error">View</Button>
+                    <Button size="small" color = "error">Edit</Button>
+                    <Button size="small" color = "error">Delete</Button>
                   </CardActions>
                 </Card>
                 
@@ -217,7 +218,7 @@ export default function Album() {
       {/* Footer */}
       <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
         <Typography variant="h7" align="center" gutterBottom>
-          SpyGlass: Created by the Vanguard Group
+          SpyGlass
         </Typography>
         <Typography
           variant="subtitle1"

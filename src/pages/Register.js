@@ -90,7 +90,7 @@ function Register(){
                                 onChange={handleInputChange}
                             />
                         </Grid>
-                        <Button variant="contained" color="primary" type="submit" >
+                        <Button variant="contained" color="error" type="submit" >
           Submit
         </Button>
                     </Grid>
