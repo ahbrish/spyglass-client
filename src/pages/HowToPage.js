@@ -11,13 +11,10 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { styled, alpha } from '@mui/material/styles';
-import IconButton from '@mui/material/IconButton';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
-import TextField from '@mui/material/TextField';
-import InputAdornment from '@mui/material/InputAdornment';
-import HouseIcon from '@mui/icons-material/House';
+import IconButton from '@mui/material/IconButton';
 
 function Copyright() {
   return (
@@ -98,8 +95,7 @@ function SearchAppBar() {
               component="div"
               sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
             >
-
-              <HouseIcon></HouseIcon>  Vanguard
+              Vanguard
             </Typography>
             <Search>
               <SearchIconWrapper>
@@ -118,75 +114,6 @@ function SearchAppBar() {
 
 
 
-function InputAdornments() {
-    const [values, setValues] = React.useState({
-      amount: '',
-      password: '',
-      weight: '',
-      weightRange: '',
-      showPassword: false,
-    });
-  
-    const handleChange = (prop) => (event) => {
-      setValues({ ...values, [prop]: event.target.value });
-    };
-    
-    const navigate = useNavigate();
-    const goToHouseGoals = () =>{
-        navigate("/housegoals");
-    }
-    return (
-        <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
-        <div>
-        <TextField
-            label="Goal Name:"
-            id="outlined-start-adornment"
-            sx={{ m: 1, width: '25ch' }}
-            InputProps={{
-              startAdornment: <InputAdornment position="start"></InputAdornment>,
-            }}
-          />
-          <TextField
-            label="Target Goal Amount:"
-            id="outlined-start-adornment"
-            sx={{ m: 1, width: '25ch' }}
-            InputProps={{
-              startAdornment: <InputAdornment position="start">$</InputAdornment>,
-            }}
-          />
-          <TextField
-            label="Amount Already Saved:"
-            id="outlined-start-adornment"
-            sx={{ m: 1, width: '25ch' }}
-            InputProps={{
-              startAdornment: <InputAdornment position="start">$</InputAdornment>,
-            }}
-          />
-          <TextField
-            label="Target Date:"
-            id="outlined-start-adornment"
-            sx={{ m: 1, width: '25ch' }}
-            InputProps={{
-              startAdornment: <InputAdornment position="start"></InputAdornment>,
-            }}
-          />
-           <TextField
-            label="Notes:"
-            id="outlined-start-adornment"
-            sx={{ m: 1, width: '25ch' }}
-            InputProps={{
-              startAdornment: <InputAdornment position="start"></InputAdornment>,
-            }}
-          />
-          
-        </div>
-        <div>
-        <Button variant="contained" align= "center" color = "error" onClick={goToHouseGoals} >Submit</Button>
-        </div>
-        </Box>
-    );
-    }
-
 
 
 
@@ -194,11 +121,8 @@ function InputAdornments() {
 
 
 export default function HowTo() {
-    const navigate = useNavigate();
-    const goToHouseGoals = () =>{
-        navigate("/housegoals");
-    }
-  
+
+
   return (
       
     <ThemeProvider theme={theme}>
@@ -223,25 +147,78 @@ export default function HowTo() {
               color="text.primary"
               gutterBottom
             >
-              New Goal
+              HowToGuide
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
               {/* Something short and leading about the collection below—its contents,
               the creator, etc. Make it short and sweet, but not too short so folks
               don&apos;t simply skip over it entirely. */}
-              User, Create your new House goal!
+              Please check out our frequently asked questions!
             </Typography>
+
+            <Typography variant="body1" align="center" color="text.primary" paragraph>
+              {/* Something short and leading about the collection below—its contents,
+              the creator, etc. Make it short and sweet, but not too short so folks
+              don&apos;t simply skip over it entirely. */}
+              How to create a goal?
+            </Typography>
+            <Typography variant="body2" align="center" color="text.secondary" paragraph>
+              {/* Something short and leading about the collection below—its contents,
+              the creator, etc. Make it short and sweet, but not too short so folks
+              don&apos;t simply skip over it entirely. */}
+              To create a goal
+            </Typography>
+
+            <Typography variant="body1" align="center" color="text.primary" paragraph>
+              {/* Something short and leading about the collection below—its contents,
+              the creator, etc. Make it short and sweet, but not too short so folks
+              don&apos;t simply skip over it entirely. */}
+              How to delete a goal?
+            </Typography>
+            <Typography variant="body2" align="center" color="text.secondary" paragraph>
+              {/* Something short and leading about the collection below—its contents,
+              the creator, etc. Make it short and sweet, but not too short so folks
+              don&apos;t simply skip over it entirely. */}
+              To delete a goal
+            </Typography>
+
+            <Typography variant="body1" align="center" color="text.primary" paragraph>
+              {/* Something short and leading about the collection below—its contents,
+              the creator, etc. Make it short and sweet, but not too short so folks
+              don&apos;t simply skip over it entirely. */}
+              How to edit a goal?
+            </Typography>
+            <Typography variant="body2" align="center" color="text.secondary" paragraph>
+              {/* Something short and leading about the collection below—its contents,
+              the creator, etc. Make it short and sweet, but not too short so folks
+              don&apos;t simply skip over it entirely. */}
+              To edit a goal
+            </Typography>
+
+            <Typography variant="body1" align="center" color="text.primary" paragraph>
+              {/* Something short and leading about the collection below—its contents,
+              the creator, etc. Make it short and sweet, but not too short so folks
+              don&apos;t simply skip over it entirely. */}
+              How to contact support?
+            </Typography>
+            <Typography variant="body2" align="center" color="text.secondary" paragraph>
+              {/* Something short and leading about the collection below—its contents,
+              the creator, etc. Make it short and sweet, but not too short so folks
+              don&apos;t simply skip over it entirely. */}
+              Please contact us by phone or through email.
+            </Typography>
+
             <Stack
               sx={{ pt: 4 }}
               direction="row"
               spacing={2}
               justifyContent="center"
             >
-                <InputAdornments></InputAdornments>
+            
 
 
                 
-             
+              <Button variant="contained" align= "center" color = "error" >Back To Home</Button>
             </Stack>
           </Container>
         </Box>
@@ -266,8 +243,3 @@ export default function HowTo() {
     </ThemeProvider>
   );
 }
-
-
-
-
-

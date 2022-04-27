@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { useNavigate } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
-
+import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
@@ -10,14 +11,10 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { styled, alpha } from '@mui/material/styles';
-import IconButton from '@mui/material/IconButton';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
-import TextField from '@mui/material/TextField';
-
-import InputAdornment from '@mui/material/InputAdornment';
-
+import IconButton from '@mui/material/IconButton';
 
 function Copyright() {
   return (
@@ -81,7 +78,7 @@ const Search = styled('div')(({ theme }) => ({
 function SearchAppBar() {
     return (
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
+        <AppBar position="static" color = "error">
           <Toolbar>
             <IconButton
               size="large"
@@ -117,71 +114,14 @@ function SearchAppBar() {
 
 
 
-function InputAdornments() {
-    const [values, setValues] = React.useState({
-      amount: '',
-      password: '',
-      weight: '',
-      weightRange: '',
-      showPassword: false,
-    });
-  
-    const handleChange = (prop) => (event) => {
-      setValues({ ...values, [prop]: event.target.value });
-    };
-
-    return (
-        <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
-        <div>
-        <TextField
-            label="Goal Name:"
-            id="outlined-start-adornment"
-            sx={{ m: 1, width: '25ch' }}
-            InputProps={{
-              startAdornment: <InputAdornment position="start"></InputAdornment>,
-            }}
-          />
-          <TextField
-            label="Target Goal Amount:"
-            id="outlined-start-adornment"
-            sx={{ m: 1, width: '25ch' }}
-            InputProps={{
-              startAdornment: <InputAdornment position="start">$</InputAdornment>,
-            }}
-          />
-          <TextField
-            label="Amount Already Saved:"
-            id="outlined-start-adornment"
-            sx={{ m: 1, width: '25ch' }}
-            InputProps={{
-              startAdornment: <InputAdornment position="start">$</InputAdornment>,
-            }}
-          />
-          <TextField
-            label="Target Date:"
-            id="outlined-start-adornment"
-            sx={{ m: 1, width: '25ch' }}
-            InputProps={{
-              startAdornment: <InputAdornment position="start"></InputAdornment>,
-            }}
-          />
-           <TextField
-            label="Notes:"
-            id="outlined-start-adornment"
-            sx={{ m: 1, width: '25ch' }}
-            InputProps={{
-              startAdornment: <InputAdornment position="start"></InputAdornment>,
-            }}
-          />
-        </div>
-        </Box>
-    );
-    }
 
 
 
-export default function About() {
-  
+
+
+
+export default function HowTo() {
+
 
   return (
       
@@ -207,20 +147,29 @@ export default function About() {
               color="text.primary"
               gutterBottom
             >
-              FAQ
+              About Us!
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
-             
+              {/* Something short and leading about the collection below—its contents,
+              the creator, etc. Make it short and sweet, but not too short so folks
+              don&apos;t simply skip over it entirely. */}
+              We are here to support you!
             </Typography>
+
+       
+       
+
             <Stack
               sx={{ pt: 4 }}
               direction="row"
               spacing={2}
               justifyContent="center"
             >
+            
 
 
-
+                
+              <Button variant="contained" align= "center" color = "error" >Back To Home</Button>
             </Stack>
           </Container>
         </Box>
@@ -245,4 +194,3 @@ export default function About() {
     </ThemeProvider>
   );
 }
-

@@ -52,7 +52,7 @@ function Login(){
                 />
             </Box>
 
-            <Button variant="contained" onClick={logMeIn}>Log In</Button>
+            <Button variant="contained" color = "error" onClick={logMeIn}>Log In</Button>
         </div>
     )
 }
